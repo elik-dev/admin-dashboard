@@ -240,7 +240,7 @@ main {
 }
 
 .card-text>p,
-.announcements-card p,
+.announcement-card p,
 .trending-card p:last-child {
     color: rgb(110, 110, 110);
 }
@@ -257,16 +257,16 @@ main {
     grid-template-rows: repeat(auto-fit, 1fr);
 }
 
-.announcements-card p {
+.announcement-card p {
     font-size: 12px;
 }
 
-.announcements-card:not(:last-child) {
+.announcement-card:not(:last-child) {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 12px;
 }
 
-.announcements-card:not(:first-child) {
+.announcement-card:not(:first-child) {
     padding-top: 12px;
 }
 
