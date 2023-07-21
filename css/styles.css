@@ -296,6 +296,7 @@ main {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     align-content: stretch;
+    gap: 24px;
 }
 
 .announcements-card-container,
