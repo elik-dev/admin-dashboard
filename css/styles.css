@@ -2,6 +2,14 @@
 :root {
     box-sizing: border-box;
     --system-font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --primary-color: white;
+    --secondary-color: #e2e8f0;
+    --accent-color: #0ea5e9;
+    --text-primary-color: black;
+    --text-secondary-color: #6e6e6e;
+    --text-accent-color: white;
+    --button-color: #0ea5e9;
+    --active-button-color: #0284c7;
 }
 
 *,
@@ -51,7 +59,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--text-primary-color);
 }
 
 img {
@@ -74,6 +82,7 @@ img {
 
 /* header styles */
 header {
+    background-color: var(--primary-color);
     font-weight: bold;
     padding: 16px 48px;
     display: grid;
@@ -105,13 +114,21 @@ header {
 .search button:hover,
 .user-info button:hover,
 .card-actions button:hover {
-    background-color: #e2e8f0;
+    background-color: var(--secondary-color);
+}
+
+button {
+    transition: all 0.05s ease-in-out;
+}
+
+button:active {
+    scale: 0.95;
 }
 
 .search input {
     border: none;
     border-radius: 24px;
-    background-color: #e2e8f0;
+    background-color: var(--secondary-color);
     height: 32px;
     width: 600px;
     padding: 0 16px;
@@ -131,6 +148,7 @@ header {
 
 .user-info p {
     font-size: 18px;
+    color: var(--text-primary-color);
 }
 
 .user-greeting {
@@ -162,9 +180,9 @@ header {
 }
 
 .action-buttons button {
-    background-color: #0ea5e9;
+    background-color: var(--button-color);
     border: none;
-    color: white;
+    color: var(--text-accent-color);
     height: 38px;
     width: 92px;
     border-radius: 24px;
@@ -174,14 +192,14 @@ header {
 }
 
 .action-buttons button:hover {
-    background-color: #0284c7;
+    background-color: var(--active-button-color);
 }
 
 /* sidebar styles */
 aside {
     position: relative;
     z-index: 1;
-    background-color: #0ea5e9;
+    background-color: var(--accent-color);
     font-weight: bold;
     font-size: 20px;
     padding: 24px;
@@ -194,7 +212,7 @@ aside {
 }
 
 aside a {
-    color: white;
+    color: var(--text-accent-color);
     display: grid;
     gap: 24px;
     grid-template-columns: 24px max-content;
@@ -222,7 +240,7 @@ aside img {
 /* main styles */
 main {
     padding: 24px;
-    background-color: #e2e8f0;
+    background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: 1fr 275px;
     gap: 24px;
@@ -236,7 +254,7 @@ main {
 .project-card,
 .announcements-card-container,
 .trending-card-container {
-    background-color: white;
+    background-color: var(--primary-color);
     padding: 24px;
     border-radius: 8px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
@@ -271,7 +289,7 @@ main {
 .card-text>p,
 .announcement-card p,
 .trending-card p:last-child {
-    color: rgb(110, 110, 110);
+    color: var(--text-secondary-color);
 }
 
 .right {
