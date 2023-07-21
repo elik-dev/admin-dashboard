@@ -51,6 +51,7 @@ h4 {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 img {
@@ -92,10 +93,19 @@ header {
     gap: 16px;
 }
 
-.search button {
-    padding: 0;
+.search button,
+.user-info button,
+.card-actions button {
+    padding: 4px;
     border: none;
     background: none;
+    border-radius: 50%;
+}
+
+.search button:hover,
+.user-info button:hover,
+.card-actions button:hover {
+    background-color: #e2e8f0;
 }
 
 .search input {
@@ -105,6 +115,10 @@ header {
     height: 32px;
     width: 600px;
     padding: 0 16px;
+}
+
+.search input:focus {
+    outline: solid 2px rgb(128, 128, 128);
 }
 
 .user-info {
@@ -148,7 +162,7 @@ header {
 }
 
 .action-buttons button {
-    background-color: #0284c7;
+    background-color: #0ea5e9;
     border: none;
     color: white;
     height: 38px;
@@ -156,13 +170,18 @@ header {
     border-radius: 24px;
     font-size: 16px;
     font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+
+.action-buttons button:hover {
+    background-color: #0284c7;
 }
 
 /* sidebar styles */
 aside {
     position: relative;
     z-index: 1;
-    background-color: #0284c7;
+    background-color: #0ea5e9;
     font-weight: bold;
     font-size: 20px;
     padding: 24px;
@@ -180,6 +199,10 @@ aside a {
     gap: 24px;
     grid-template-columns: 24px max-content;
     place-items: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 aside ul {
@@ -237,6 +260,12 @@ main {
     border-left: solid orange 8px;
     display: grid;
     grid-template-rows: repeat(2, auto);
+    transition: all 0.1s ease-in-out;
+}
+
+.project-card:hover {
+    scale: 1.02;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-text>p,
